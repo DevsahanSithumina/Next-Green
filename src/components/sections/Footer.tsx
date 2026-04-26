@@ -66,7 +66,7 @@ export const Footer = () => {
               Sri Lanka Institute of <br /> Information Technology
             </p>
             <p className="text-sm text-white/60 mt-2">Malabe, Sri Lanka</p>
-            <p className="text-xs text-white/50 mt-4">Supervised by Prof. Anuradha Karunasena and  Ms. Lokesha Weerasingha</p>
+            <p className="text-xs text-white/50 mt-4">Supervised by Mr. Lokesha Weerasingha & Prof. Anuradha Kodagoda</p>
           </div>
         </div>
 
