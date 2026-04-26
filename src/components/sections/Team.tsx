@@ -107,7 +107,7 @@ export const Team = () => {
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
               { name: "Mr. Lokesha Weerasingha", role: "Co-Supervisor " },
-              { name: "Professor Anuradha Kodagoda", role: "Supervisor" },
+              { name: "Professor Anuradha Karunasena", role: "Supervisor" },
             ].map((s) => (
               <div key={s.name} className="rounded-3xl bg-card border border-border shadow-soft p-6 flex items-center gap-5 hover:shadow-card transition-shadow">
                 <div className="w-20 h-20 rounded-2xl bg-gradient-sky flex items-center justify-center shrink-0">
