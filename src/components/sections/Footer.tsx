@@ -66,13 +66,13 @@ export const Footer = () => {
               Sri Lanka Institute of <br /> Information Technology
             </p>
             <p className="text-sm text-white/60 mt-2">Malabe, Sri Lanka</p>
-            <p className="text-xs text-white/50 mt-4">Supervised by Mr. Lokesha Weerasingha & Prof. Anuradha Kodagoda</p>
+            <p className="text-xs text-white/50 mt-4">Supervised by Prof. Anuradha Karunasena and  Ms. Lokesha Weerasingha</p>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/50">
           <p>© {new Date().getFullYear()} Tomatoa Research Team. All rights reserved.</p>
-          <p>Built with ❤️ for Sri Lankan farmers · SLIIT Final-Year Project</p>
+          <p> SLIIT Final-Year Project</p>
         </div>
       </div>
     </footer>
