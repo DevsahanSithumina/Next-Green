@@ -1,4 +1,4 @@
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award, FileText } from "lucide-react";
 
 import sahabanduImg from "../../assets/Hiran.jpg";
 import sithumnaImg from "../../assets/Sithumina.jpg";
@@ -7,13 +7,13 @@ import anuradhaImg from "../../assets/Anuradha.jpg";
 import siriwardaneImg from "../../assets/siri.jpg";
 import lokeshaImg from "../../assets/Lokesha.jpg";
 
+/* ================= TEAM DATA ================= */
 const team = [
   {
     name: "Prof. Anuradha Karunasena",
     email: "anuradha.k@sliit.lk",
     role: "Supervisor",
-    contribution:
-      "Guide the research team throughout the project lifecycle. Review and approve the research topic, objectives, and scope. Provide academic guidance for IoT, AI, machine learning, and smart agriculture areas. Support the team in identifying the research gap and improving the proposed solution. Monitor project progress and ensure the work follows the approved timeline. Review research documents, presentations, and final project reports. Advise the team on methodology, dataset preparation, model selection, and result validation. Evaluate the technical implementation of the smart greenhouse system. Provide feedback to improve system accuracy, usability, and research quality. Ensure the project follows university research standards and ethical guidelines.",
+    contribution: "Guide the research team throughout the project lifecycle...",
     color: "tomato",
     image: anuradhaImg,
   },
@@ -21,8 +21,7 @@ const team = [
     name: "Ms. Lokesha Weerasinghe",
     email: "lokesha.w@sliit.lk",
     role: "Co-Supervisor",
-    contribution:
-      "Guide the research team throughout the project lifecycle. Review and approve the research topic, objectives, and scope. Provide academic guidance for IoT, AI, machine learning, and smart agriculture areas. Support the team in identifying the research gap and improving the proposed solution. Monitor project progress and ensure the work follows the approved timeline. Review research documents, presentations, and final project reports. Advise the team on methodology, dataset preparation, model selection, and result validation. Evaluate the technical implementation of the smart greenhouse system. Provide feedback to improve system accuracy, usability, and research quality. Ensure the project follows university research standards and ethical guidelines.",
+    contribution: "Guide the research team throughout the project lifecycle...",
     color: "sky",
     image: lokeshaImg,
   },
@@ -30,37 +29,61 @@ const team = [
     name: "E.H.W. Sahabandu",
     reg: "IT22358516",
     role: "Embedded Systems & Smart Sensor Integration",
-    contribution:
-      "Embedded systems, IoT for smart agriculture, ML decision-making, environmental data model training, intelligent decision-support logic, smart sensor integration, and sustainable automation.",
+    contribution: "Embedded systems, IoT, ML decision-making...",
     color: "tomato",
     image: sahabanduImg,
+    pdf: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22358516%20(1).pdf",
   },
   {
     name: "Sithumna B.K.D.",
     reg: "IT22316936",
     role: "AI Detection & Preventative Control",
-    contribution:
-      "IoT, data science, AI, sensor data analytics, AI-driven detection systems, preventative control systems, proactive automation methods, environmental data streams, and intelligent pattern recognition.",
+    contribution: "IoT, AI, sensor analytics...",
     color: "leaf",
     image: sithumnaImg,
+    pdf: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22316936%20%20(1).pdf",
   },
   {
     name: "C.R.H. Anthony",
     reg: "IT22313584",
     role: "Sensor Fusion & Embedded ML",
-    contribution:
-      "Sensor data fusion, embedded programming, ML for real-time control, AI, embedded systems, IoT applications, real-time data handling, hardware programming, and AI model implementation on microcontrollers.",
+    contribution: "Sensor fusion, embedded ML...",
     color: "sky",
     image: anthonyImg,
+    pdf: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22313584%20(1).pdf",
   },
   {
     name: "Siriwardana L.W.N.R.",
     reg: "IT22572356",
     role: "Predictive Analytics & Real-Time Control",
-    contribution:
-      "AI, IoT, embedded systems, real-time control, predictive analytics, time-series forecasting, embedded hardware control, environmental prediction models, and real-time actuation techniques.",
+    contribution: "Predictive analytics, IoT...",
     color: "sunlight",
     image: siriwardaneImg,
+    pdf: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22572356Siriwardana%20LWNR%20(1).pdf",
+  },
+];
+
+/* ================= FINAL REPORTS ================= */
+const finalReports = [
+  {
+    title: "Project Proposal Document",
+    link: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/CamScanner%2022-07-2025%2006.59%20proposal.pdf",
+  },
+  {
+    title: "C.R.H. Anthony - Final Report",
+    link: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22313584%20-%20final.pdf",
+  },
+  {
+    title: "E.H.W. Sahabandu - Final Report",
+    link: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22358516-2%20(1)%20final.pdf",
+  },
+  {
+    title: "Sithumna B.K.D. - Final Report",
+    link: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22316936%20%20(1)final.pdf",
+  },
+  {
+    title: "Siriwardana L.W.N.R. - Final Report",
+    link: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22572356%20(1)%20final.pdf",
   },
 ];
 
@@ -71,110 +94,89 @@ const colorMap: Record<string, string> = {
   sunlight: "bg-gradient-sunset",
 };
 
+/* ================= COMPONENT ================= */
 export const Team = () => {
   return (
     <section id="team" className="section relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-mesh" />
 
       <div className="container relative">
-        <div className="text-center max-w-2xl mx-auto reveal">
+        {/* HEADER */}
+        <div className="text-center max-w-2xl mx-auto">
           <div className="chip bg-tomato/10 text-tomato mb-4">
             <GraduationCap className="w-3.5 h-3.5" /> Meet the Team
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-navy">
-            The{" "}
-            <span className="text-gradient-tomato">
-              SLIIT research students
-            </span>{" "}
-            behind Tomatoa
+            SLIIT Research Team
           </h2>
         </div>
 
+        {/* TEAM GRID */}
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((m, i) => (
+          {team.map((m) => (
             <article
               key={m.reg || m.email}
-              className="reveal group rounded-3xl bg-card border border-border shadow-soft hover:shadow-card hover:-translate-y-2 transition-all overflow-hidden"
-              style={{ transitionDelay: `${i * 80}ms` }}
+              className="rounded-3xl bg-card border shadow-soft hover:-translate-y-2 transition"
             >
-              <div
-                className={`relative aspect-[4/5] ${
-                  colorMap[m.color]
-                } overflow-hidden`}
-              >
+              <div className={`aspect-[4/5] ${colorMap[m.color]} overflow-hidden`}>
                 <img
                   src={m.image}
                   alt={m.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/20 to-transparent" />
-
-                <div className="absolute bottom-0 inset-x-0 p-5 text-white">
-                  <h3 className="text-xl font-display font-bold">
-                    {m.name}
-                  </h3>
-
-                  <div className="text-xs font-mono opacity-90">
-                    {m.reg || m.email}
-                  </div>
-                </div>
               </div>
 
               <div className="p-5">
-                <div className="text-xs uppercase tracking-wider text-tomato font-bold">
+                <h3 className="font-bold">{m.name}</h3>
+                <div className="text-xs text-muted-foreground">
+                  {m.reg || m.email}
+                </div>
+
+                <div className="text-xs text-tomato font-bold mt-2">
                   {m.role}
                 </div>
 
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  {m.contribution}
-                </p>
+                {m.pdf && (
+                  <a
+                    href={m.pdf}
+                    target="_blank"
+                    className="inline-flex items-center gap-2 mt-3 text-xs text-white bg-navy px-3 py-2 rounded-lg"
+                  >
+                    <FileText className="w-4 h-4" />
+                    View Report
+                  </a>
+                )}
               </div>
             </article>
           ))}
         </div>
 
-        {/* Supervisors */}
-        <div id="supervisors" className="mt-20 reveal">
+        {/* FINAL REPORTS */}
+        <div className="mt-24">
           <div className="text-center mb-10">
-            <div className="chip bg-sky/10 text-sky mb-4">
-              <Award className="w-3.5 h-3.5" /> Supervisors
+            <div className="chip bg-leaf/10 text-leaf mb-4">
+              <FileText className="w-3.5 h-3.5" /> Final Reports
             </div>
 
-            <h3 className="text-3xl md:text-4xl font-bold text-navy">
-              Guided by{" "}
-              <span className="text-gradient-tomato">
-                expert academic supervision
-              </span>
+            <h3 className="text-3xl font-bold">
+              Project Documentation & Final Reports
             </h3>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {team.slice(0, 2).map((s) => (
-              <div
-                key={s.email}
-                className="rounded-3xl bg-card border border-border shadow-soft p-6 flex items-center gap-5 hover:shadow-card transition-shadow"
-              >
-                <img
-                  src={s.image}
-                  alt={s.name}
-                  className="w-20 h-20 rounded-2xl object-cover shrink-0"
-                />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {finalReports.map((r, i) => (
+              <div key={i} className="bg-card p-6 rounded-2xl shadow-soft">
+                <h4 className="font-semibold">{r.title}</h4>
 
-                <div>
-                  <div className="text-xs uppercase tracking-wider text-sky font-bold">
-                    {s.role}
-                  </div>
-
-                  <div className="text-lg font-display font-bold text-navy mt-1">
-                    {s.name}
-                  </div>
-
-                  <div className="text-xs text-muted-foreground mt-1">
-                    SLIIT, Malabe
-                  </div>
-                </div>
+                <a
+                  href={r.link}
+                  target="_blank"
+                  className="inline-flex items-center gap-2 mt-4 text-sm text-white bg-leaf px-4 py-2 rounded-lg"
+                >
+                  <FileText className="w-4 h-4" />
+                  Open PDF
+                </a>
               </div>
             ))}
           </div>
