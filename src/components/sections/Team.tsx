@@ -70,6 +70,28 @@ const finalReports = [
     link: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/CamScanner%2022-07-2025%2006.59%20proposal.pdf",
   },
   {
+    title: "Final Thesis UI",
+    link: "https://drive.google.com/file/d/1vXioQF9xPpqOFufBy_L7_QHMw2aCJEdt/view?usp=sharing",
+  },
+  {
+    title: "Checklist",
+    link: "https://drive.google.com/file/d/1OBAVCyvSejCNnDikqFpeXqC_plK4gNQx/view?usp=sharing",
+  },
+   {
+    title: "Checklist 2",
+    link: "https://drive.google.com/file/d/1lGSkcGRpiePc1sVRnPaKYVr3xiqSoDQf/view?usp=sharing",
+  },
+  {
+    title: "Reasearch paper",
+    link: "https://drive.google.com/file/d/1Hb7ZkgyP3PH8L2Abl_mSu5_5Ai0jv5Ub/view?usp=sharing",
+  },
+
+  {
+    title: "Presentation",
+    link: "https://drive.google.com/file/d/1c5z1sa07RfQ7PBjTBygmoixO95HhHFCq/view?usp=sharing",
+  },
+
+  {
     title: "C.R.H. Anthony - Final Report",
     link: "https://evpemdtcklcfdzfrufai.supabase.co/storage/v1/object/public/pdfs/IT22313584%20-%20final.pdf",
   },
@@ -141,6 +163,7 @@ export const Team = () => {
                   <a
                     href={m.pdf}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 mt-3 text-xs text-white bg-navy px-3 py-2 rounded-lg"
                   >
                     <FileText className="w-4 h-4" />
@@ -172,10 +195,11 @@ export const Team = () => {
                 <a
                   href={r.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-4 text-sm text-white bg-leaf px-4 py-2 rounded-lg"
                 >
                   <FileText className="w-4 h-4" />
-                  Open PDF
+                  Open Document
                 </a>
               </div>
             ))}
